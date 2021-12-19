@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  rlimachip-flask-app-container:
+    image: rlimachip-flask-app-docker-compose:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/rlimachip-flask-app-container
+    ports:
+      - "8080-8100:8080"
